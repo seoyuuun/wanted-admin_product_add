@@ -5,7 +5,7 @@ import { PALLETS } from 'style/theme';
 const Sidebar = styled.div`
   display: flex;
   color: #2c2c2c;
-  border-top: 2px solid ${PALLETS.lightgray};
+  border-top: 2px solid ${PALLETS.LIGHTGRAY};
   justify-content: space-between;
   align-items: center;
   padding: 20px;
@@ -13,7 +13,7 @@ const Sidebar = styled.div`
   height: 50px;
   text-decoration: none;
   &:hover {
-    background: ${PALLETS.lightgray};
+    background: ${PALLETS.LIGHTGRAY};
     cursor: pointer;
   }
 `;
@@ -29,11 +29,11 @@ const DropdownMenu = styled.span`
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: ${PALLETS.gray};
+  color: ${PALLETS.BLACK};
 
   &:hover {
-    background: ${PALLETS.lightpurple};
-    color: ${PALLETS.purple};
+    background: ${PALLETS.LIGHTPURPLE};
+    color: ${PALLETS.PURPLE};
     cursor: pointer;
   }
 `;

@@ -7,10 +7,10 @@ import SubMenu from './SubMenu';
 
 const SidebarWrapper = styled.nav`
   background: white;
-  border: 2px solid ${PALLETS.lightgray};
+  border: 2px solid ${PALLETS.LIGHTGRAY};
   font-size: 16px;
   font-weight: 600;
-  color: ${PALLETS.gray};
+  color: ${PALLETS.DARKGRAY};
   width: 250px;
   height: 100vh;
   position: fixed;
@@ -29,7 +29,7 @@ const SidebarMenu = styled.nav`
 const Logo = styled.nav`
   width: 250px;
   height: 50px;
-  color: ${PALLETS.purple};
+  color: ${PALLETS.PURPLE};
   line-height: 50px;
   font-weight: bold;
   padding-left: 25px;
