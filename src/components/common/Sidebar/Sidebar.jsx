@@ -8,7 +8,9 @@ import SubMenu from './SubMenu';
 const SidebarWrapper = styled.nav`
   background: white;
   border: 2px solid ${PALLETS.lightgray};
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: ${PALLETS.gray};
   width: 250px;
   height: 100vh;
   position: fixed;
@@ -21,13 +23,16 @@ const SidebarMenu = styled.nav`
   width: 100%;
   height: 50px
   padding-left: 20px;
+
 `;
 
 const Logo = styled.nav`
   width: 250px;
-  height: 40px;
+  height: 50px;
   color: ${PALLETS.purple};
-  line-height: 40px;
+  line-height: 50px;
+  font-weight: bold;
+  padding-left: 25px;
   font-size: 22px;
 `;
 

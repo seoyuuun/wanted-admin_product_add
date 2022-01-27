@@ -6,4 +6,5 @@ export const PALLETS = {
   gray: '#999999',
   lightgray: '#e8e8e8',
   beige: '#f7f7f7',
+  black: '#ffffff',
 };

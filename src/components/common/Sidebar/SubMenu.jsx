@@ -5,16 +5,35 @@ import { PALLETS } from 'style/theme';
 const Sidebar = styled.div`
   display: flex;
   color: #2c2c2c;
-  border: 2px solid ${PALLETS.lightgray};
+  border-top: 2px solid ${PALLETS.lightgray};
   justify-content: space-between;
   align-items: center;
   padding: 20px;
   list-style: none;
   height: 50px;
   text-decoration: none;
-  font-size: 18px;
   &:hover {
     background: ${PALLETS.lightgray};
+    cursor: pointer;
+  }
+`;
+
+const SidebarLabel = styled.span`
+  margin-left: 10px;
+`;
+
+const DropdownMenu = styled.span`
+  background: rgb(243, 243, 243);
+  height: 40px;
+  padding-left: 2rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: ${PALLETS.gray};
+
+  &:hover {
+    background: ${PALLETS.lightpurple};
+    color: ${PALLETS.purple};
     cursor: pointer;
   }
 `;
@@ -28,7 +47,7 @@ const SubMenu = ({ item }) => {
       <Sidebar to={item.path} onClick={item.subNav && showSubnav}>
         <div>
           {item.icon}
-          <div>{item.title}</div>
+          <SidebarLabel>{item.title}</SidebarLabel>
         </div>
         <div>
           {item.subNav && subnav
@@ -41,9 +60,9 @@ const SubMenu = ({ item }) => {
       {subnav &&
         item.subNav.map((item, index) => {
           return (
-            <div to={item.path} key={index}>
-              <div>{item.title}</div>
-            </div>
+            <DropdownMenu to={item.path} key={index}>
+              <SidebarLabel>{item.title}</SidebarLabel>
+            </DropdownMenu>
           );
         })}
     </>
