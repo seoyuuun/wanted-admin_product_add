@@ -104,9 +104,10 @@ const Wrapper = styled.div`
 `;
 
 const SideTitle = styled.div`
+  min-width: 180px;
   font-size: 14px;
   font-weight: 600;
-  padding: 50px 30px 0;
+  padding: 50px 20px 0;
   color: ${PALLETS.BLACK};
   background: ${PALLETS.LIGHTGRAY};
 `;

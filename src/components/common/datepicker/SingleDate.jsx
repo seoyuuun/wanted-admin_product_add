@@ -6,18 +6,12 @@ import 'react-datepicker/dist/react-datepicker.css';
 const SingleDate = () => {
   const [startDate, setStartDate] = useState();
 
-  let handleColor = (time) => {
-    return time.getHours() > 12 ? 'text-success' : 'text-error';
-  };
-
   return (
     <SDatePicker
-      showTimeSelect
-      placeholderText="YYYY.MM.DD  YY:MM"
-      dateFormat="yyyy/MM/dd h:mm aa"
+      placeholderText="YYYY.MM.DD"
+      dateFormat="yyyy/MM/dd"
       selected={startDate}
       onChange={(date) => setStartDate(date)}
-      timeClassName={handleColor}
       minDate={new Date()}
     />
   );

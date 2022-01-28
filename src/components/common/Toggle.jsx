@@ -2,10 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { PALLETS } from "../../style/theme";
 
-const Toggle = ({ isToggled, onToggle }) => {
+const Toggle = ({ isToggled, onToggle, ...props }) => {
   return (
     <ToggleContainer>
-      <input type="checkbox" checked={isToggled} onChange={onToggle} />
+      <input
+        type="checkbox"
+        checked={isToggled}
+        onChange={onToggle}
+        {...props}
+      />
       <ToggleSpan />
     </ToggleContainer>
   );
