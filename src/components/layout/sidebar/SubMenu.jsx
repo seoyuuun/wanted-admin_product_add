@@ -13,7 +13,7 @@ const SubMenu = ({ item }) => {
       {item.subNav &&
         item.subNav.map((item, index) => {
           return (
-            <DropdownMenu to={item.path} key={index}>
+            <DropdownMenu to={item.path} key={index} status={item.status}>
               <SidebarLabel>{item.title}</SidebarLabel>
             </DropdownMenu>
           );
@@ -45,13 +45,15 @@ const SidebarLabel = styled.span`
 `;
 
 const DropdownMenu = styled.span`
-  background: rgb(243, 243, 243);
+  background: ${(props) =>
+    props.status ? `${PALLETS.LIGHTPURPLE}` : `rgb(243, 243, 243)`};
   height: 40px;
   padding-left: 2rem;
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: ${PALLETS.BLACK};
+  color: ${(props) =>
+    props.status ? `${PALLETS.PURPLE}` : `${PALLETS.BLACK}`};
 
   &:hover {
     background: ${PALLETS.LIGHTPURPLE};

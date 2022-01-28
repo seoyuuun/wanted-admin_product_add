@@ -10,8 +10,8 @@ const Sidebar = () => {
     <SidebarWrapper>
       <SidebarMenu>
         <Logo>Sir.Loin</Logo>
-        {SidebarData.map((item, index) => {
-          return <SubMenu item={item} key={index} />;
+        {SidebarData.map((item, index, status) => {
+          return <SubMenu item={item} key={index} status={status} />;
         })}
       </SidebarMenu>
     </SidebarWrapper>
