@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { PALLETS } from "style/theme";
 
-const Radio = ({ content, select, onChangeValue }) => {
+const Radio = ({ content, select, onChangeValue, ...props }) => {
   return (
     <Wrapper>
       <Item>
@@ -12,6 +12,7 @@ const Radio = ({ content, select, onChangeValue }) => {
           value={content}
           checked={content === select}
           onChange={(event) => onChangeValue(event)}
+          {...props}
         />
         <RadioButtonLabel />
         <div>{content}</div>
