@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 import { Input, Button } from 'components/common';
 import { Suboption } from './Suboption';
-import { useState } from 'react';
 
 export const Mainoption = () => {
   return (
@@ -121,14 +120,3 @@ const Btnaddsub = styled.button`
 `;
 
 const Btnaddsubtit = styled.strong``;
-
-// const Suboption = styled.section`
-//   margin-top: 10px;
-//   display: flex;
-//   align-items: center;
-//   gap: 15px;
-// `;
-
-// const Subarrow = styled.span`
-//   font-size: 30px;
-// `;
