@@ -1,12 +1,17 @@
-import React from "react";
-import Jy from "./jy";
+import styled from "styled-components";
+import PagesInfoNotice from "./pagesInfoNotice";
 
-const Admin = (props) => {
+const Admin = () => {
   return (
-    <>
-      <Jy />
-    </>
+    <Wrap>
+      <PagesInfoNotice />
+    </Wrap>
   );
 };
 
 export default Admin;
+
+const Wrap = styled.section`
+  margin-left: 250px;
+  padding: 15px;
+`;
