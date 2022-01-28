@@ -1,19 +1,20 @@
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
+import { forwardRef } from 'react';
 
-export const Input = ({ width, placeholder, desc, onChange }) => {
-  return (
-    <Container>
-      <Inputspace
-        type="text"
+export const Input = forwardRef(
+  ({ width, placeholder, type = 'text', ...props }, ref) => {
+    return (
+      <Container
+        ref={ref}
+        type={type}
         width={width}
         placeholder={placeholder}
-        onChange={onChange}
+        {...props}
       />
-      <Desc display={desc}>{desc}</Desc>
-    </Container>
-  );
-};
+    );
+  }
+);
 
 const Container = styled.div`
   display: flex;
