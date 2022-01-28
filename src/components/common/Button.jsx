@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 
-export const Button = ({ width, text, bdcolor, bgcolor, ftcolor }) => {
+export const Button = ({ width, text, bdcolor, bgcolor, ftcolor, onClick }) => {
   return (
     <Container
       type="button"
@@ -9,6 +9,7 @@ export const Button = ({ width, text, bdcolor, bgcolor, ftcolor }) => {
       bd={bdcolor}
       bg={bgcolor}
       ft={ftcolor}
+      onClick={onClick}
     >
       {text}
     </Container>
