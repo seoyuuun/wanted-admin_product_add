@@ -3,15 +3,18 @@ import { PALLETS } from 'style/theme';
 import { forwardRef } from 'react';
 
 export const Input = forwardRef(
-  ({ width, placeholder, type = 'text', ...props }, ref) => {
+  ({ width, placeholder, type = 'text', desc, ...props }, ref) => {
     return (
-      <Container
-        ref={ref}
-        type={type}
-        width={width}
-        placeholder={placeholder}
-        {...props}
-      />
+      <Container>
+        <Inputspace
+          ref={ref}
+          type={type}
+          width={width}
+          placeholder={placeholder}
+          {...props}
+        />
+        <Desc display={desc}>{desc}</Desc>
+      </Container>
     );
   }
 );
