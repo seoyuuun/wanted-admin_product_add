@@ -28,7 +28,7 @@ const SidebarWrapper = styled.nav`
   color: ${PALLETS.DARKGRAY};
   width: 250px;
   height: 100vh;
-  position: sticky;
+  position: fixed;
   top: 0px;
   z-index: 10;
 `;
