@@ -1,8 +1,10 @@
 import React from "react";
 import { Button } from "components/common/Button";
-import { Input } from "components/common/input";
-// import styled from "styled-components";
+import { Input } from "components/common/Input";
+import styled from "styled-components";
 import { PALLETS } from "style/theme";
+import InfoNoticeOption from "../infoNoticeOption/InfoNoticeOption";
+import { useState } from "react/cjs/react.development";
 
 /*"informationnotice" : {
 							"productname": String,
@@ -13,62 +15,93 @@ import { PALLETS } from "style/theme";
 							"key" : String,
 						}*/
 
-const infoDic = [
-  {
-    title: "제품명 / 중량",
-    width: "600px",
-  },
-  {
-    title: "원산지 / 원재료 함량",
-    width: "600px",
-  },
-  {
-    title: "등급",
-    width: "600px",
-  },
-  {
-    title: "보관",
-    width: "600px",
-  },
-  {
-    title: "식품 유형",
-    width: "600px",
-  },
-];
+const InfoNoticeForm = ({ infoDic, count, onCountHandle }) => {
+  const [value, setValue] = useState("");
+  const [optionList, setOptionList] = useState([
+    {
+      title: "항목 제목 자유 입력",
+      contents: "내용을 입력해주세요",
+    },
+  ]);
 
-const InfoNoticeForm = ({ content }) => {
+  const addOption = ({ title, contents }) => {
+    const newOption = [...optionList, { title: title, contents: contents }];
+    setOptionList(newOption);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!value) return;
+
+    if (e.currentTarget.name === "title") {
+      addOption({ title: e.currentTarget.name });
+    } else addOption({ contents: e.currentTarget.name });
+
+    addOption(value);
+    setValue("");
+  };
+
   return (
-    <div
-      style={{
-        backgroundColor: `${PALLETS.WHITE}`,
-        width: "90%",
-        height: "90%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <form>
-        <h3>정보고시 {"생성순서"}</h3>
-
+    <Container onChange={onCountHandle}>
+      <Form>
+        <h1>정보고시 {count}</h1>
         {infoDic.map((item) => (
-          <>
-            <br />
-            <br />
+          <InfoBox key={item.length}>
             <label>{item.title} </label>
-            <Input width={item.width} placeholder={content} />
-          </>
+            <Input width={item.width} placeholder={item.content} />
+          </InfoBox>
         ))}
-      </form>
-      <Button
-        text={"+ 항목 추가"}
-        width={100}
-        bdcolor={PALLETS.BEIGE}
-        bgcolor={PALLETS.WHITE}
-        ftcolor={PALLETS.NAVY}
-      />
-    </div>
+
+        <InfoNoticeOption
+          optionList={optionList}
+          addOption={addOption}
+          value={value}
+          setValue={setValue}
+        />
+        <div onSubmit={handleSubmit}>
+          <Button
+            text={"+ 항목 추가"}
+            width={100}
+            bdcolor={PALLETS.BEIGE}
+            bgcolor={PALLETS.WHITE}
+            ftcolor={PALLETS.NAVY}
+          />
+        </div>
+      </Form>
+    </Container>
   );
 };
 
 export default InfoNoticeForm;
+
+const Container = styled.div`
+  background-color: ${PALLETS.WHITE};
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Form = styled.form`
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  h1 {
+    font-size: 20px;
+  }
+`;
+
+const InfoBox = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+
+  label {
+    padding-left: 20px;
+  }
+`;
