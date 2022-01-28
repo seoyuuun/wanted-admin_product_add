@@ -38,26 +38,10 @@ const infoDic = [
   },
 ];
 
-const InfoNoticeForm = ({ count, onCountHandle, addNotice }) => {
-  const [infoForm, setInfoForm] = useState({
-    name: "",
-    origin: "",
-    ranking: "",
-    keep: "",
-    type: "",
-  });
-
+const InfoNoticeForm = ({ count, notice, setNotice }) => {
   const [optionList, setOptionList] = useState(infoDic);
 
   const onAdd = (newOption) => {
-    /*
-    {
-      id: 5,
-      title: "식품 유형",
-      name: "type", // 추가한 항목의 name은 어떻게?
-      content: "식품 유형을 입력해 주세요. (ex) 포장육",
-    }
-    */
     setOptionList((prev) => [
       ...prev,
       {
@@ -68,38 +52,29 @@ const InfoNoticeForm = ({ count, onCountHandle, addNotice }) => {
     ]);
   };
 
+  const onDel = (event) => {
+    if (optionList.length <= 5) return;
+    setOptionList((old) => old.slice(0, old.length - 1));
+  };
+
+  // console.log("optionForm length", Object.keys(optionForm).length);
+  console.log("optionList : ", optionList.length);
   return (
     <>
       <Container>
-        <Form
-          id="new-notice-form"
-          onSubmit={(e) => {
-            e.preventDefault();
-            onCountHandle();
-            // 추가 로직!
-            addNotice(infoForm);
-            setInfoForm({
-              name: "",
-              origin: "",
-              ranking: "",
-              keep: "",
-              type: "",
-            });
-            setOptionList(infoDic);
-          }}
-        >
-          <h1>정보고시 {count}</h1>
+        <Form id="new-notice-form">
           {/* 기본 입력 form */}
-          {optionList.map((item, index) => (
+          <h1>정보고시 {count}</h1>
+          {optionList.map((item) => (
             <InfoBox key={item.id}>
               <label htmlFor={item.name + "-input"}>{item.title}</label>
               <Input
                 id={item.name + "-input"}
                 width="600px"
                 placeholder={item.placeholder}
-                value={infoForm[item.name]}
+                value={notice[item.name]}
                 onChange={(e) => {
-                  setInfoForm((prev) => ({
+                  setNotice((prev) => ({
                     ...prev,
                     [item.name]: e.target.value,
                   }));
@@ -107,15 +82,12 @@ const InfoNoticeForm = ({ count, onCountHandle, addNotice }) => {
               />
             </InfoBox>
           ))}
-          {/* 객체를 보고 싶으면 => {JSON.stringify(infoForm)} 로 확인해보자. */}
+
+          {/* 객체는 => {JSON.stringify(infoForm)}으로 확인 */}
         </Form>
         {/* 옵션 */}
-        <InfoNoticeOption onAdd={onAdd} />
+        <InfoNoticeOption count={count} onAdd={onAdd} onDel={onDel} />
       </Container>
-
-      <AddButton type="submit" form="new-notice-form">
-        + 정보고시 추가
-      </AddButton>
     </>
   );
 };
@@ -130,15 +102,6 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
-const AddButton = styled.button`
-  width: ${(props) => props.width || "100%"};
-  border: 1px solid ${PALLETS.NAVY};
-  height: 50px;
-  text-align: center;
-  color: ${PALLETS.NAVY};
-  background-color: ${PALLETS.LIGHTGRAY};
-  font-size: 18px;
 `;
 
 const Form = styled.form`
