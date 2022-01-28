@@ -66,7 +66,7 @@ const InsertImagePreviewBtn = styled.label`
   border-radius: 4px;
   text-align: center;  
   padding: 10px;
-  background-color: ${PALLETS.WHITE};
+  background-color: ${PALLETS.LIGHTGRAY};
   border: 1.5px solid ${PALLETS.PURPLE};
 `;
 
