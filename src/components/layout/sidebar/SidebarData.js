@@ -27,7 +27,7 @@ export const SidebarData = [
       {
         title: '상품 등록',
         path: '/',
-        cName: 'pickMenu',
+        status: 'active',
       },
     ],
   },
