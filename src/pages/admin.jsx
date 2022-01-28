@@ -1,10 +1,12 @@
 import styled from 'styled-components';
 import Addoption from './addoption';
+import SY from './sy';
 
 const Admin = () => {
   return (
     <Wrap>
       <Addoption></Addoption>
+      <SY />
     </Wrap>
   );
 };
