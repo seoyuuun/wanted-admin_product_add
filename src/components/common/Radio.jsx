@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { PALLETS } from "style/theme";
+import React from 'react';
+import styled from 'styled-components';
+import { PALLETS } from 'style/theme';
 
-const Radio = ({ content, select, onChangeValue }) => {
+const Radio = ({ content, select, onChangeValue, id }) => {
   return (
     <Wrapper>
       <Item>
         <RadioButton
           type="radio"
-          name="radio"
+          id={id}
           value={content}
           checked={content === select}
           onChange={(event) => onChangeValue(event)}
@@ -25,7 +25,7 @@ export default Radio;
 const Wrapper = styled.div`
   height: auto;
   width: 100%;
-  padding: 0px 16px 24px 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
 `;
 
@@ -57,7 +57,7 @@ const RadioButton = styled.input`
   &:hover ~ ${RadioButtonLabel} {
     background: ${PALLETS.GRAY};
     &::after {
-      content: "";
+      content: '';
       display: block;
       border-radius: 50%;
       width: 17px;
