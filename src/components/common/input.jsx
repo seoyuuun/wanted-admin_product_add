@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 
-export const Input = ({ width, placeholder, desc }) => {
+export const Input = ({ width, placeholder, desc, onChange }) => {
   return (
     <Container>
-      <Inputspace type="text" width={width} placeholder={placeholder} />
+      <Inputspace
+        type="text"
+        width={width}
+        placeholder={placeholder}
+        onChange={onChange}
+      />
       <Desc display={desc}>{desc}</Desc>
     </Container>
   );
