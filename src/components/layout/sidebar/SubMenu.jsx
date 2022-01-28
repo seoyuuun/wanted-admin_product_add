@@ -2,6 +2,39 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 
+const SubMenu = ({ item }) => {
+  const [subnav, setSubnav] = useState(false);
+  const showSubnav = () => setSubnav(!subnav);
+
+  return (
+    <>
+      <Sidebar to={item.path} onClick={item.subNav && showSubnav}>
+        <div>
+          {item.icon}
+          <SidebarLabel>{item.title}</SidebarLabel>
+        </div>
+        <div>
+          {item.subNav && subnav
+            ? item.iconOpened
+            : item.subNav
+            ? item.iconClosed
+            : null}
+        </div>
+      </Sidebar>
+      {subnav &&
+        item.subNav.map((item, index) => {
+          return (
+            <DropdownMenu to={item.path} key={index}>
+              <SidebarLabel>{item.title}</SidebarLabel>
+            </DropdownMenu>
+          );
+        })}
+    </>
+  );
+};
+
+export default SubMenu;
+
 const Sidebar = styled.div`
   display: flex;
   color: #2c2c2c;
@@ -37,36 +70,3 @@ const DropdownMenu = styled.span`
     cursor: pointer;
   }
 `;
-
-const SubMenu = ({ item }) => {
-  const [subnav, setSubnav] = useState(false);
-  const showSubnav = () => setSubnav(!subnav);
-
-  return (
-    <>
-      <Sidebar to={item.path} onClick={item.subNav && showSubnav}>
-        <div>
-          {item.icon}
-          <SidebarLabel>{item.title}</SidebarLabel>
-        </div>
-        <div>
-          {item.subNav && subnav
-            ? item.iconOpened
-            : item.subNav
-            ? item.iconClosed
-            : null}
-        </div>
-      </Sidebar>
-      {subnav &&
-        item.subNav.map((item, index) => {
-          return (
-            <DropdownMenu to={item.path} key={index}>
-              <SidebarLabel>{item.title}</SidebarLabel>
-            </DropdownMenu>
-          );
-        })}
-    </>
-  );
-};
-
-export default SubMenu;

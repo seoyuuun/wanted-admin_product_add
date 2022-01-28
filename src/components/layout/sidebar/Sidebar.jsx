@@ -5,6 +5,21 @@ import { SidebarData } from './SidebarData';
 import { PALLETS } from 'style/theme';
 import SubMenu from './SubMenu';
 
+const Sidebar = () => {
+  return (
+    <SidebarWrapper>
+      <SidebarMenu>
+        <Logo>Sir.Loin</Logo>
+        {SidebarData.map((item, index) => {
+          return <SubMenu item={item} key={index} />;
+        })}
+      </SidebarMenu>
+    </SidebarWrapper>
+  );
+};
+
+export default Sidebar;
+
 const SidebarWrapper = styled.nav`
   background: white;
   border: 2px solid ${PALLETS.LIGHTGRAY};
@@ -13,8 +28,8 @@ const SidebarWrapper = styled.nav`
   color: ${PALLETS.DARKGRAY};
   width: 250px;
   height: 100vh;
-  position: fixed;
-  top: 0;
+  position: sticky;
+  top: 0px;
   z-index: 10;
 `;
 
@@ -35,18 +50,3 @@ const Logo = styled.nav`
   padding-left: 25px;
   font-size: 22px;
 `;
-
-const Sidebar = () => {
-  return (
-    <SidebarWrapper>
-      <SidebarMenu>
-        <Logo>Sir.Loin</Logo>
-        {SidebarData.map((item, index) => {
-          return <SubMenu item={item} key={index} />;
-        })}
-      </SidebarMenu>
-    </SidebarWrapper>
-  );
-};
-
-export default Sidebar;
