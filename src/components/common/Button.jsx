@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 
-export const Button = ({ width, text, bdcolor, bgcolor, ftcolor }) => {
+export const Button = ({ width, text, bdcolor, bgcolor, ftcolor, onClick }) => {
   return (
     <Container
       type="button"
@@ -9,6 +9,7 @@ export const Button = ({ width, text, bdcolor, bgcolor, ftcolor }) => {
       bd={bdcolor}
       bg={bgcolor}
       ft={ftcolor}
+      onClick={onClick}
     >
       {text}
     </Container>
@@ -18,6 +19,7 @@ export const Button = ({ width, text, bdcolor, bgcolor, ftcolor }) => {
 const Container = styled.button`
   width: ${(props) => props.width || '100%'};
   border: 1px solid ${PALLETS.GRAY};
+  flex-shrink: 0;
   border-radius: 8px;
   height: 36px;
   line-height: 36px;
