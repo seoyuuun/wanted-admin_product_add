@@ -1,20 +1,27 @@
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
+import { forwardRef } from 'react';
 
-export const Button = ({ width, text, bdcolor, bgcolor, ftcolor, onClick }) => {
-  return (
-    <Container
-      type="button"
-      width={width}
-      bd={bdcolor}
-      bg={bgcolor}
-      ft={ftcolor}
-      onClick={onClick}
-    >
-      {text}
-    </Container>
-  );
-};
+export const Button = forwardRef(
+  (
+    { width, type = 'button', text, bdcolor, bgcolor, ftcolor, ...props },
+    ref
+  ) => {
+    return (
+      <Container
+        type={type}
+        ref={ref}
+        width={width}
+        bd={bdcolor}
+        bg={bgcolor}
+        ft={ftcolor}
+        {...props}
+      >
+        {text}
+      </Container>
+    );
+  }
+);
 
 const Container = styled.button`
   width: ${(props) => props.width || '100%'};
