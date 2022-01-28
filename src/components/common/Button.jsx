@@ -18,6 +18,7 @@ export const Button = ({ width, text, bdcolor, bgcolor, ftcolor }) => {
 const Container = styled.button`
   width: ${(props) => props.width || '100%'};
   border: 1px solid ${PALLETS.GRAY};
+  flex-shrink: 0;
   border-radius: 8px;
   height: 36px;
   line-height: 36px;
