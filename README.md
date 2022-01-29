@@ -97,7 +97,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ### 2. 상품 등록 (양다혜)
 
-<img src="https://user-images.githubusercontent.com/58350897/151652995-cdcae45c-20be-4b89-98b2-803965774362.gif />
+!(img src="https://user-images.githubusercontent.com/58350897/151652995-cdcae45c-20be-4b89-98b2-803965774362.gif)
 
 ### 3. 상품 옵션 (박서영)
 
