@@ -111,7 +111,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 - boolean state 값을 받아 true, false로 state를 관리되도록 기능
 
-<br/><br/>
+<br/>
 
 #### 박서영
 
@@ -148,9 +148,9 @@ https://brave-visvesvaraya-053de0.netlify.app/
 - 상품 정보 고시 (전체 form 추가/삭제, 정보고시 생성 순서 숫자 표기)  <br/> <br/>
  ![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/53133662/151654179-7e4c0d5b-0a90-4ea5-8bc9-cc590c8eb54b.gif)
 - 상품 정보 고시 (input 입력값 받기)  <br/> <br/>
-![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/53133662/151654174-ea538855-2522-46fc-af51-e1ce68782f4e.gif)
+  ![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/53133662/151654177-19bfd785-c0f8-41a2-ae85-d5a7f01424c8.gif)
 - 상품 정보 고시 (항목 옵션 추가/삭제)  <br/> <br/>
-![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/53133662/151654177-19bfd785-c0f8-41a2-ae85-d5a7f01424c8.gif)
+  ![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/53133662/151654174-ea538855-2522-46fc-af51-e1ce68782f4e.gif)
 - 상품옵션 toggle <br/> <br/>
   ![상품 옵션 toggle](https://user-images.githubusercontent.com/53133662/151653417-d94492b6-d325-4d99-9d84-0d93c8828a44.gif)
 - 상품소개이미지, 구매자추천이미지 <br/> <br/>
@@ -172,6 +172,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 테스크 분석 및 분리, 공용 컴포넌트 제작, 깃헙 이슈를 통한 프로젝트 관리, 데이터 명세 등 사전에 충분한 협의를 통해 체계적으로 계획을 세웠던 프로젝트였다. 불필요하게 낭비되는 코드를 줄이고 건설적으로 코드를 설계할 수 있어서 공부가 많이 되었다.
 
 ### 🙋‍♀️ 민지연
+
 
 
 ## 프로젝트 구조 설명
