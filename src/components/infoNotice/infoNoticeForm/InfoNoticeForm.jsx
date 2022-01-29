@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Input } from "components/common/Input";
-
+import { Button } from "components/common/Button";
 import styled from "styled-components";
 import { PALLETS } from "style/theme";
-import InfoNoticeOption from "../infoNoticeOption/InfoNoticeOption";
 
 const infoDic = [
   {
@@ -38,34 +37,64 @@ const infoDic = [
   },
 ];
 
-const InfoNoticeForm = ({ count, notice, setNotice }) => {
-  const [optionList, setOptionList] = useState(infoDic);
+const InfoNoticeForm = ({ count, notice, setNotice, delNotice }) => {
+  const [optionList, setOptionList] = useState([]);
 
-  const onAdd = (newOption) => {
-    setOptionList((prev) => [
-      ...prev,
-      {
-        ...newOption,
-        name: newOption.title.replace(/ /g, "-"), // slugify cjk-slug
-        id: prev.length + 1, // TODO: id 중복을 해결!
-      },
-    ]);
-  };
+  function changeTitle(oldTitle, newTitle) {
+    if (!Object.keys(notice).includes(newTitle)) {
+      setOptionList((prev) =>
+        prev.map((option) => {
+          if (option.id === oldTitle || option.name === oldTitle) {
+            return { ...option, name: newTitle };
+          }
 
-  const onDel = (event) => {
-    if (optionList.length <= 5) return;
-    setOptionList((old) => old.slice(0, old.length - 1));
-  };
+          return option;
+        })
+      );
 
-  // console.log("optionForm length", Object.keys(optionForm).length);
-  console.log("optionList : ", optionList.length);
+      setNotice((prev) => {
+        const value = prev[oldTitle];
+        const result = {
+          ...prev,
+          [newTitle]: value,
+        };
+        delete result[oldTitle];
+        return result;
+      });
+    }
+  }
+
+  function deleteOption(targetOption) {
+    setOptionList((prev) =>
+      prev.filter((option) => option.id !== targetOption.id)
+    );
+
+    setNotice((prev) => {
+      const result = { ...prev };
+      delete result[targetOption.name || targetOption.id];
+      return result;
+    });
+  }
+
   return (
-    <>
-      <Container>
+    <Container>
+      <Warp>
         <Form id="new-notice-form">
-          {/* 기본 입력 form */}
-          <h1>정보고시 {count}</h1>
-          {optionList.map((item) => (
+          <HanderWarp>
+            <h1>정보고시 {count}</h1>
+            <Button
+              text="삭제"
+              width="100px"
+              bdcolor={PALLETS.RED}
+              bgcolor={PALLETS.WHITE}
+              ftcolor={PALLETS.NAVY}
+              onClick={() => {
+                delNotice();
+              }}
+            />
+          </HanderWarp>
+
+          {infoDic.map((item) => (
             <InfoBox key={item.id}>
               <label htmlFor={item.name + "-input"}>{item.title}</label>
               <Input
@@ -82,13 +111,56 @@ const InfoNoticeForm = ({ count, notice, setNotice }) => {
               />
             </InfoBox>
           ))}
+          {optionList.map((item) => (
+            <InfoBox key={item.id}>
+              <Input
+                id={item.id + "-title-input"}
+                width="200px"
+                placeholder="항목 제목 자유 입력"
+                value={item.name}
+                onChange={(e) => {
+                  const newTitle = e.target.value;
+                  changeTitle(item.name || item.id, newTitle);
+                }}
+              />
+              <Input
+                id={item.id + "-value-input"}
+                width="600px"
+                placeholder="내용을 입력해주세요"
+                value={notice[item.name || item.id]}
+                onChange={(e) => {
+                  setNotice((prev) => ({
+                    ...prev,
+                    [item.name || item.id]: e.target.value,
+                  }));
+                }}
+              />
 
-          {/* 객체는 => {JSON.stringify(infoForm)}으로 확인 */}
+              <Btn
+                onClick={() => {
+                  deleteOption(item);
+                }}
+              >
+                삭제
+              </Btn>
+            </InfoBox>
+          ))}
         </Form>
-        {/* 옵션 */}
-        <InfoNoticeOption count={count} onAdd={onAdd} onDel={onDel} />
-      </Container>
-    </>
+      </Warp>
+
+      <Button
+        onClick={() => {
+          const newOption = { id: crypto.randomUUID(), name: "" };
+          setOptionList((prev) => [...prev, newOption]);
+        }}
+        type="button"
+        text="+ 항목 추가"
+        width="200px"
+        bdcolor={PALLETS.BEIGE}
+        bgcolor={PALLETS.WHITE}
+        ftcolor={PALLETS.NAVY}
+      />
+    </Container>
   );
 };
 
@@ -102,6 +174,14 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
+`;
+
+const Warp = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
 `;
 
 const Form = styled.form`
@@ -110,18 +190,39 @@ const Form = styled.form`
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+
   h1 {
     font-size: 20px;
   }
 `;
 
 const InfoBox = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
 
   label {
+    width: 50%;
     padding-left: 20px;
   }
+`;
+
+const HanderWarp = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+`;
+
+const Btn = styled.button`
+  width: 100px;
+  border: 1px solid ${PALLETS.DARKGRAY};
+  flex-shrink: 0;
+  height: 45px;
+  margin-left: 10px;
+  text-align: center;
+  color: ${PALLETS.RED}
+  border-color: ${(props) => props.bd || `${PALLETS.BLACK}`};
+  background-color: ${(props) => props.bg || `${PALLETS.WHITE}`};
 `;

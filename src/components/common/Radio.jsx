@@ -1,17 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 import { PALLETS } from "style/theme";
-
-const Radio = ({ content, select, onChangeValue }) => {
+const Radio = ({ content, select, onChangeValue, ...props }) => {
   return (
     <Wrapper>
       <Item>
         <RadioButton
           type="radio"
-          name="radio"
           value={content}
           checked={content === select}
           onChange={(event) => onChangeValue(event)}
+          {...props}
         />
         <RadioButtonLabel />
         <div>{content}</div>
@@ -25,7 +24,7 @@ export default Radio;
 const Wrapper = styled.div`
   height: auto;
   width: 100%;
-  padding: 0px 16px 24px 16px;
+  padding: 0px 16px;
   box-sizing: border-box;
 `;
 

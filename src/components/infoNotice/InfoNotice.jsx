@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import InfoNoticeForm from "./infoNoticeForm/InfoNoticeForm";
 import { PALLETS } from "style/theme";
 import styled from "styled-components";
@@ -9,12 +9,16 @@ const InfoNotice = () => {
   const addNotice = (newNotice) => {
     setCount((prev) => prev + 1);
     setForm((prev) => [...prev, { ...newNotice, count }]);
-    console.log(form);
+  };
+
+  const delNotice = (noticeCount) => {
+    if (count <= 1) return;
+    setCount((prev) => prev - 1);
+
+    setForm((prev) => prev.slice(0, prev.length - 1));
   };
 
   console.log(JSON.stringify(form));
-  useEffect(() => {}, []); // count가 있는 경우와 없는 경우를 생각하기
-
   return (
     <InfoContainer>
       {form.map((notice) => (
@@ -22,6 +26,7 @@ const InfoNotice = () => {
           key={notice.count}
           count={notice.count}
           notice={notice}
+          delNotice={delNotice}
           setNotice={(transform) => {
             setForm((oldForm) =>
               oldForm.map((oldNotice) => {

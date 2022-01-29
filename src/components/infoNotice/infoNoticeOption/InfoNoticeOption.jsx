@@ -1,13 +1,8 @@
-import React from "react";
-
+import React, { useState } from "react";
 import { Input } from "components/common/Input";
-import { Button } from "components/common/Button";
-
 import styled from "styled-components";
-import { PALLETS } from "style/theme";
-import { useState } from "react/cjs/react.development";
 
-const InfoNoticeOption = ({ onAdd, onDel, count }) => {
+const InfoNoticeOption = ({ onAdd, count }) => {
   const [optionForm, setOptionForm] = useState({
     title: "",
     placeholder: "",
@@ -34,53 +29,54 @@ const InfoNoticeOption = ({ onAdd, onDel, count }) => {
   };
 
   return (
-    <>
-      <div style={{ display: "flex" }}>
+    <Container>
+      <Warp>
         <InfoBox id={"new-option-form-" + count} onSubmit={onSubmitInput}>
           <Input
-            width="30%"
+            width="230px"
             placeholder="항목 제목 자유 입력"
             name="title"
             value={title}
             onChange={onChangeInput}
           />
           <Input
-            width="50%"
+            width="490px"
             placeholder="내용을 입력해주세요"
             name="placeholder"
             value={placeholder}
             onChange={onChangeInput}
           />
         </InfoBox>
-        <Button
-          text="삭제"
-          width="100px"
-          bdcolor={PALLETS.RED}
-          bgcolor={PALLETS.WHITE}
-          ftcolor={PALLETS.NAVY}
-          onClick={onDel}
-        />
-      </div>
-
-      <Button
-        form={"new-option-form-" + count}
-        type="submit"
-        text="+ 항목 추가"
-        width={100}
-        bdcolor={PALLETS.BEIGE}
-        bgcolor={PALLETS.WHITE}
-        ftcolor={PALLETS.NAVY}
-      />
-    </>
+      </Warp>
+    </Container>
   );
 };
 
 export default InfoNoticeOption;
 
-const InfoBox = styled.form`
+const Container = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 0 50px;
+  margin-bottom: 50px;
+`;
+
+const Warp = styled.div`
+  width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`;
+
+const InfoBox = styled.form`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 10px 0;
+  margin-left: 10px;
 
   label {
     padding-left: 20px;
