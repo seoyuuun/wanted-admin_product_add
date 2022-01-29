@@ -116,7 +116,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 - 상품옵션 toggle <br/> <br/>
 ![상품 옵션 toggle](https://user-images.githubusercontent.com/53133662/151653417-d94492b6-d325-4d99-9d84-0d93c8828a44.gif)
 - 상품소개이미지, 구매자추천이미지 <br/> <br/>
-![상품소개이미지, 구매자추천이미지](https://user-images.githubusercontent.com/93420227/151652847-52a1969d-4eae-48d3-9679-2fbc334518a8.gif)
+![상품소개이미지, 구매자추천이미지]()
 	  
 
 
