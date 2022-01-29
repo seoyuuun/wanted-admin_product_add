@@ -1,6 +1,6 @@
-import Contentwrap from "components/layout/Contentwrap";
-import styled from "styled-components";
-import ProductInfo from "components/productInfo/ProductInfo";
+import Contentwrap from 'components/layout/Contentwrap';
+import styled from 'styled-components';
+import ProductInfo from 'components/productInfo/ProductInfo';
 
 const ProductInfopage = () => {
   return (
