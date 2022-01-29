@@ -8,6 +8,8 @@ import useForm from "hooks/useForm";
 import validate from "hooks/validate";
 import { Button } from "components/common/Button";
 import { PALLETS } from "style/theme";
+import ProductInfoImg from "./adminSection/productInfoImg";
+import BuyerRecmmend from "./adminSection/buyerRecmmend";
 
 const Admin = () => {
   const { values, errors, submitting, handleChange, handleSubmit } = useForm({
@@ -58,8 +60,10 @@ const Admin = () => {
   return (
     <Wrap onSubmit={handleSubmit}>
       <ExpoSalesPeriodSet />
-      <ProductInfo handleChange={handleChange} values={values} />
+      <ProductInfo />
       <Productorder />
+      <ProductInfoImg />
+      <BuyerRecmmend />
       <Addoption handleChange={handleChange} values={values} />
       <PagesInfoNotice />
       <Button

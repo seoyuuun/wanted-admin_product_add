@@ -1,26 +1,27 @@
+import React from "react";
 import Contentwrap from "components/layout/Contentwrap";
 import styled from "styled-components";
-import ProductOrderStart from "components/productOrderSet/ProductOrderStart";
 import { PALLETS } from "style/theme";
-import ProductPickUp from "components/productOrderSet/ProductPickUp";
+import BuyerRecommend from "components/buyerRecommend/BuyerRecommend";
 
-const Productorder = () => {
+const BuyerRecmmend = () => {
   return (
-    <Contentwrap title="상품 옵션">
+    <Contentwrap title="구매자 추천 이미지">
       <Contentwrap.Main>
         <Wrap>
-          <ProductOrderStart />
-          <ProductPickUp />
+          <BuyerRecommend />
         </Wrap>
       </Contentwrap.Main>
     </Contentwrap>
   );
 };
 
-export default Productorder;
+export default BuyerRecmmend;
 
 const Wrap = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   background: ${PALLETS.LIGHTGRAY};
-  margin-bottom: 20px;
 `;
