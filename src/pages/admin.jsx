@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Addoption from "./addoption";
+import PagesInfoNotice from "./pagesInfoNotice";
 import Productorder from "./productorder";
 import SY from "./sy";
 import ProductInfo  from "./productInfo";
@@ -11,6 +12,7 @@ const Admin = () => {
       <SY />
       <ProductInfo/>
       <Productorder />
+      <PagesInfoNotice />
     </Wrap>
   );
 };

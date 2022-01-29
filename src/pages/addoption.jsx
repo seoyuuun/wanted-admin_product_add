@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { Optionset } from 'components/productoption';
-import { PALLETS } from 'style/theme';
-import { useState, useRef } from 'react';
-import { Button } from 'components/common/Button';
+import styled from "styled-components";
+import { Optionset } from "components/productoption";
+import { PALLETS } from "style/theme";
+import { useState, useRef } from "react";
+import { Button } from "components/common/Button";
 
 const Addoption = () => {
   const [optionSets, setOptionsets] = useState([]);
@@ -30,7 +30,7 @@ const Addoption = () => {
         <Title>상품옵션</Title>
         <Button
           text="+ 옵션 세트 추가"
-          width={'100px'}
+          width={"100px"}
           bdcolor={`${PALLETS.NAVY}`}
           ftcolor={`${PALLETS.NAVY}`}
           onClick={onSetCreate}

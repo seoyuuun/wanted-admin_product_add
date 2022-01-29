@@ -1,6 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
-import { PALLETS } from 'style/theme';
+import React from "react";
+import styled from "styled-components";
+import { PALLETS } from "style/theme";
 const Radio = ({ content, select, onChangeValue, ...props }) => {
   return (
     <Wrapper>
@@ -56,7 +56,7 @@ const RadioButton = styled.input`
   &:hover ~ ${RadioButtonLabel} {
     background: ${PALLETS.GRAY};
     &::after {
-      content: '';
+      content: "";
       display: block;
       border-radius: 50%;
       width: 17px;
