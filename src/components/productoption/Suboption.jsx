@@ -2,22 +2,28 @@ import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 import { Input, Button } from 'components/common';
 
-export const Suboption = () => {
+export const Suboption = ({ subOptions, onSubRemove }) => {
   return (
-    <Subwrap>
-      <Subarrow>&#10551;</Subarrow>
-      <Input placeholder={'추가 옵션명 (필수)'} />
-      <Input placeholder={'추가옵션 정상가 (필수)'} desc={'원'} />
-      <Button
-        text={'삭제'}
-        width={'50px'}
-        bdcolor={`${PALLETS.RED}`}
-        ftcolor={`${PALLETS.RED}`}
-      />
-    </Subwrap>
+    <ul>
+      {subOptions &&
+        subOptions.map((e) => (
+          <Subitem key={e.id}>
+            <Subarrow>&#10551;</Subarrow>
+            <Input placeholder={'추가 옵션명 (필수)'} />
+            <Input placeholder={'추가옵션 정상가 (필수)'} desc={'원'} />
+            <Button
+              text={'삭제'}
+              width={'50px'}
+              bdcolor={`${PALLETS.RED}`}
+              ftcolor={`${PALLETS.RED}`}
+              onClick={() => onSubRemove(e.id)}
+            />
+          </Subitem>
+        ))}
+    </ul>
   );
 };
-const Subwrap = styled.section`
+const Subitem = styled.li`
   margin-top: 10px;
   display: flex;
   align-items: center;
