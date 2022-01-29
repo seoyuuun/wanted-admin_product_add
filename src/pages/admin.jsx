@@ -1,53 +1,54 @@
-import styled from 'styled-components';
-import Addoption from './adminSection/addoption';
-import PagesInfoNotice from './adminSection/pagesInfoNotice';
-import Productorder from './adminSection/productorder';
-import ProductInfo from './adminSection/productInfo';
-import SubmitForm from 'hooks/SubmitForm';
-import ExpoSalesPeriodSet from './adminSection/ExpoSalesPeriodSet';
-import useForm from 'hooks/useForm';
-import validate from 'hooks/validate';
+import styled from "styled-components";
+import Addoption from "./adminSection/addoption";
+import PagesInfoNotice from "./adminSection/pagesInfoNotice";
+import Productorder from "./adminSection/productorder";
+import ProductInfo from "./adminSection/productInfo";
+import ExpoSalesPeriodSet from "./adminSection/ExpoSalesPeriodSet";
+import useForm from "hooks/useForm";
+import validate from "hooks/validate";
+import { Button } from "components/common/Button";
+import { PALLETS } from "style/theme";
 
 const Admin = () => {
   const { values, errors, submitting, handleChange, handleSubmit } = useForm({
     initialValues: {
-      exposuredeadline: '',
-      salesdeadline: '',
+      exposuredeadline: "",
+      salesdeadline: "",
       categories: [],
       filtertags: [],
-      title: '',
-      desc: '',
-      code: '',
-      thumbnamil: '',
+      title: "",
+      desc: "",
+      code: "",
+      thumbnamil: "",
       representativeimages: [],
       stock: 0,
       option: {
-        image: '',
-        optiontit: '',
+        image: "",
+        optiontit: "",
         regularprice: 0,
         sellingprice: 0,
-        stock: '',
-        taxation: '',
+        stock: "",
+        taxation: "",
         addoption: {
-          optiontit: '',
+          optiontit: "",
           regularprice: 0,
         },
       },
       introimages: [],
       recommandedimages: [],
       informationnotice: {
-        productname: '',
-        origin: '',
-        ranking: '',
-        custody: '',
-        foodcode: '',
-        key: '',
+        productname: "",
+        origin: "",
+        ranking: "",
+        custody: "",
+        foodcode: "",
+        key: "",
       },
-      deliverydesignation: '',
-      pickup: '',
-      preorderdelivery: '',
-      mileage: '',
-      thankyoucard: '',
+      deliverydesignation: "",
+      pickup: "",
+      preorderdelivery: "",
+      mileage: "",
+      thankyoucard: "",
     },
     onSubmit: (values) => {
       alert(JSON.stringify(values, null, 2));
@@ -57,11 +58,18 @@ const Admin = () => {
   return (
     <Wrap onSubmit={handleSubmit}>
       <ExpoSalesPeriodSet />
-      <ProductInfo />
+      <ProductInfo handleChange={handleChange} values={values} />
       <Productorder />
       <Addoption handleChange={handleChange} values={values} />
       <PagesInfoNotice />
-      <SubmitForm />
+      <Button
+        type="submit"
+        disabled={submitting}
+        text={"상품 등록"}
+        width={"200px"}
+        bdcolor={`${PALLETS.NAVY}`}
+        ftcolor={`${PALLETS.NAVY}`}
+      ></Button>
     </Wrap>
   );
 };
