@@ -78,6 +78,26 @@ https://brave-visvesvaraya-053de0.netlify.app/
 ☑️ [항복 삭제 버튼]을 누르면 [항목 옵션] 삭제 가능
 
 ☑️ 정보고시 내 입력된 모든 값(항목추가옵션 포함)은 form으로 실시간 업데이트 가능
+	  
+![상품 정보 고시 입력 값 예시](https://user-images.githubusercontent.com/53133662/151653704-f3c48d94-53de-405a-b74c-9b9f23f5c48c.png)
+
+```
+[
+	{
+	"count":1,
+	"name":"제품명 내용",
+	"origin":"원산지 내용",
+	"ranking":"등급 내용",
+	"keep":"보관 내용",
+	"type":"식품 유형 내용",
+	"추가항목제목1":"추가항목내용1",
+	"추가항목제목2":"추가항목내용2"
+	}
+]
+
+```
+
+
 
 ### 공통 컴포넌트
 
@@ -97,7 +117,8 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ### 2. 상품 등록 (양다혜)
 
-<img src="https://user-images.githubusercontent.com/58350897/151652995-cdcae45c-20be-4b89-98b2-803965774362.gif />
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/58350897/151652995-cdcae45c-20be-4b89-98b2-803965774362.gif)
+
 
 ### 3. 상품 옵션 (박서영)
 
