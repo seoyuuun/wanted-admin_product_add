@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import ExpoSalesPeriodSet from './ExpoSalesPeriodSet';
 import Addoption from './addoption';
 import PagesInfoNotice from './pagesInfoNotice';
 import Productorder from './productorder';
+import SY from './sy';
 import ProductInfo from './productInfo';
-
+import SubmitForm from 'hooks/SubmitForm';
 const Admin = () => {
   return (
+    
     <Wrap>
+      <SY />
       <ExpoSalesPeriodSet />
-      <Addoption />
       <ProductInfo />
       <Productorder />
+      <Addoption />
       <PagesInfoNotice />
+      <SubmitForm />
     </Wrap>
   );
 };
