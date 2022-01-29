@@ -3,12 +3,14 @@ import Addoption from "./addoption";
 import PagesInfoNotice from "./pagesInfoNotice";
 import Productorder from "./productorder";
 import SY from "./sy";
+import ProductInfo  from "./productInfo";
 
 const Admin = () => {
   return (
     <Wrap>
       <Addoption></Addoption>
       <SY />
+      <ProductInfo/>
       <Productorder />
       <PagesInfoNotice />
     </Wrap>
