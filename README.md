@@ -63,13 +63,13 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ### 4. 상품소개 이미지, 구매자 추천 이미지 섹션, 상품 정보 고시 (민지연)
 
-☑️ 정보고시 form이 추가될때마다 정보고시 생성 순서 숫자 count로 표기(default 값은 1)
+☑️ 정보고시 form이 추가될때마다 정보고시 생성 순서 숫자 count로 관리(default 값은 1)
 
 ☑️ mock data로 title, placeholder 관리
 
-☑️ 정보고시 form 추가 기능, 추가 될 때마다 count +1
+☑️ 정보고시 form 추가 기능, 추가 될 때마다 생성 순서 숫자 count +1
 
-☑️ 정보고시 form 삭제 기능, 삭제 될 때마다 count -1
+☑️ 정보고시 form 삭제 기능, 삭제 될 때마다 생성 순서 숫자 count -1
 
 ☑️ 고정된 title의 input값 실시간으로 form data로 output
 
