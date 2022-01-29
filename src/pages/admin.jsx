@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import Addoption from "./addoption";
+import BuyerRecmmend from "./buyerRecmmend";
+import ProductInfoImg from "./productInfoImg";
 import Productorder from "./productorder";
 import SY from "./sy";
 
@@ -9,6 +11,8 @@ const Admin = () => {
       <Addoption></Addoption>
       <SY />
       <Productorder />
+      <ProductInfoImg />
+      <BuyerRecmmend />
     </Wrap>
   );
 };
