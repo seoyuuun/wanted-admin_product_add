@@ -22,4 +22,5 @@ export default Productorder;
 const Wrap = styled.section`
   box-sizing: border-box;
   background: ${PALLETS.LIGHTGRAY};
+  margin-bottom: 20px;
 `;

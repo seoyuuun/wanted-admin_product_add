@@ -3,15 +3,18 @@ import styled from "styled-components";
 import { PALLETS } from "style/theme";
 import InsertImage from "components/common/InsertImage";
 
-const BuyerRecommend = (props) => {
+const BuyerRecommend = () => {
   return (
     <Wrapper>
-      {/* <SideTitle>
-           
-          </SideTitle> */}
-      <SetWrapper>
-        <InsertImage width={"150px"} text={"+ 이미지 추가"} />
-      </SetWrapper>
+      <Content>
+        <InsertImage
+          width="200px"
+          radius="4px"
+          text="+ 이미지 첨부"
+          inputId="buyerrecommend"
+          isMultiple="false"
+        />
+      </Content>
     </Wrapper>
   );
 };
@@ -23,31 +26,14 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100px;
+  height: 100%;
   justify-content: center;
   align-items: center;
-  /* border-top: 2px solid ${PALLETS.GRAY}; */
-`;
-
-const SideTitle = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
-  min-width: 180px;
-  font-size: 14px;
-  font-weight: 600;
-  color: ${PALLETS.BLACK};
-  background: ${PALLETS.LIGHTGRAY};
-  order: 1px solid ${PALLETS.BLACK};
-`;
-
-const SetWrapper = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 50px;
-  height: inherit;
-  width: 100%;
   background: ${PALLETS.WHITE};
+`;
+
+const Content = styled.section`
+  width: 100%;
+  height: 100%;
+  padding: 10px;
 `;
