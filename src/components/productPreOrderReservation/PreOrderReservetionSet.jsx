@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { PALLETS } from 'style/theme';
 import Toggle from 'components/common/Toggle';
@@ -6,6 +6,7 @@ import SingleDate from 'components/common/datepicker/SingleDate';
 import DateRange from 'components/common/datepicker/DateRange';
 
 const PreOrderReservetionSet = () => {
+  const [isToggled, setIsToggled] = useState(false);
   return (
     <Wrapper>
       <SideTitle>
@@ -14,7 +15,10 @@ const PreOrderReservetionSet = () => {
         <div>예약 배송</div>
       </SideTitle>
       <SetWrapper>
-        <Toggle />
+        <Toggle
+          isToggled={isToggled}
+          onToggle={() => setIsToggled(!isToggled)}
+        />
         <OrderTimeSet>
           <div>주문 시간</div>
           <DateRange />
