@@ -18,6 +18,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 ## 과제 구현 목록
 
 ### 1 노출 및 판매 기간 설정 (박서윤)
+
 ☑️ 제한 없음을 default값으로 지정
 
 ☑️ 설정한 노출기간이 만료된 경우, 자동으로 '미노출' 상태로 변경
@@ -31,6 +32,16 @@ https://brave-visvesvaraya-053de0.netlify.app/
 ☑️ 기간 시작 시간을 기준으로 그 이전의 시간으로 endDate 설정 제한
 
 ### 2. 상품 등록 (양다혜)
+
+☑️ 카테고리 목록에서 제공된 카테고리 생성
+
+☑️ 상품명, 상품 코드, 상품 구성 소개 정보 입력
+
+☑️ 상품 썸네일 이미지 선택(이미지는 1개만 선택 가능)
+
+☑️ 상품 대표 이미지 선택(여러장 선택)
+
+☑️ 이미지 파일명 출력 및 선택 삭제
 
 ### 3. 상품 옵션 (박서영)
 
@@ -50,16 +61,15 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ☑️ 상품 판매가 : 상품의 판매가를 입력할 수 있음
 
-
 ### 4. 상품 정보 고시 (민지연)
 
-### 4.  상품소개 이미지, 구매자 추천 이미지 섹션, 상품 정보 고시 (민지연)
+### 4. 상품소개 이미지, 구매자 추천 이미지 섹션, 상품 정보 고시 (민지연)
 
 ☑️ 정보고시 form이 추가될때마다 정보고시 생성 순서 숫자 count로 표기(default 값은 1)
 
 ☑️ mock data로 title, placeholder 관리
 
-☑️ 정보고시 form 추가 기능, 추가 될 때마다 count +1 
+☑️ 정보고시 form 추가 기능, 추가 될 때마다 count +1
 
 ☑️ 정보고시 form 삭제 기능, 삭제 될 때마다 count -1
 
@@ -69,41 +79,43 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ☑️ 항복 삭제 버튼을 누르면 추가된 항목 옵션 삭제 가능
 
-### 공통 컴포넌트 
+### 공통 컴포넌트
 
 #### 민지연
 
-☑️ Toggle : 사용하고자 하는 컴포넌트에 content, select, onChange를 받아 onChange로 event가 실행되면 select가 되도록 기능 
+☑️ Toggle : 사용하고자 하는 컴포넌트에 content, select, onChange를 받아 onChange로 event가 실행되면 select가 되도록 기능
 
 ☑️ Radio : boolean state 값을 받아 true, false로 state를 관리되도록 기능
-
 
 <br/>
 
 ## 기능별 영상
 
 ### 1 노출 및 판매 기간 설정 (박서윤)<br/>
+
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/84560867/151652562-43658a25-5ff8-40a4-bf59-bcde24ab04c2.gif)
 
 ### 2. 상품 등록 (양다혜)
 
+<img src="https://user-images.githubusercontent.com/58350897/151652995-cdcae45c-20be-4b89-98b2-803965774362.gif />
+
 ### 3. 상품 옵션 (박서영)
 
 - 옵션 세트 추가 <br/> <br/>
-![옵션세트추가](https://user-images.githubusercontent.com/93420227/151652844-b57c1b8a-1bdf-405a-977d-3b7f7e4b7b90.gif)
+  ![옵션세트추가](https://user-images.githubusercontent.com/93420227/151652844-b57c1b8a-1bdf-405a-977d-3b7f7e4b7b90.gif)
 - 옵션 세트 내 옵션 추가 <br/> <br/>
-![옵션세트내옵션추가](https://user-images.githubusercontent.com/93420227/151652835-69846b15-8f79-4461-a56c-4ffb39dcbc50.gif)
+  ![옵션세트내옵션추가](https://user-images.githubusercontent.com/93420227/151652835-69846b15-8f79-4461-a56c-4ffb39dcbc50.gif)
 - 추가 옵션 추가 <br/> <br/>
-![추가옵션등록](https://user-images.githubusercontent.com/93420227/151652854-8cda92c2-0287-4e81-bf09-795a90e400d9.gif)
-- 이미지 프리뷰 첨부 <br/>  <br/>
-![이미지첨부](https://user-images.githubusercontent.com/93420227/151652847-52a1969d-4eae-48d3-9679-2fbc334518a8.gif)
-
+  ![추가옵션등록](https://user-images.githubusercontent.com/93420227/151652854-8cda92c2-0287-4e81-bf09-795a90e400d9.gif)
+- 이미지 프리뷰 첨부 <br/> <br/>
+  ![이미지첨부](https://user-images.githubusercontent.com/93420227/151652847-52a1969d-4eae-48d3-9679-2fbc334518a8.gif)
 
 ### 4. 상품 정보 고시 (민지연)
 
 ## 과제 후기
 
 ### 🙋‍♀️ 박서윤
+
 원활한 협업을 위해서 환경 셋팅에 들이는 시간을 아까워하지 않아야함을 다시 한번 느낄 수 있었으며, 효율적인 협업을 위한 핵심적인 방법 중 하나는, 충분한 협의를 통해 공통된 모듈을 분리하고, 어떻게 task를 맡을지를 확실히 분담해 중복되는 개발 작업이 이루어지지 않도록 하고, 불필요한 작업 시간을 줄이도록 하는 것임을 체득할 수 있었던 협업 프로젝트였다.
 <br/>
 
