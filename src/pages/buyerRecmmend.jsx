@@ -19,6 +19,9 @@ const BuyerRecmmend = () => {
 export default BuyerRecmmend;
 
 const Wrap = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   box-sizing: border-box;
   background: ${PALLETS.LIGHTGRAY};
 `;

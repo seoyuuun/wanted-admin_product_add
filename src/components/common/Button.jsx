@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import { PALLETS } from 'style/theme';
-import { forwardRef } from 'react';
+import styled from "styled-components";
+import { PALLETS } from "style/theme";
+import { forwardRef } from "react";
 
 export const Button = forwardRef(
   (
-    { width, type = 'button', text, bdcolor, bgcolor, ftcolor, ...props },
+    { width, type = "button", text, bdcolor, bgcolor, ftcolor, ...props },
     ref
   ) => {
     return (
@@ -24,7 +24,7 @@ export const Button = forwardRef(
 );
 
 const Container = styled.button`
-  width: ${(props) => props.width || '100%'};
+  width: ${(props) => props.width || "100%"};
   border: 1px solid ${PALLETS.GRAY};
   flex-shrink: 0;
   border-radius: 8px;

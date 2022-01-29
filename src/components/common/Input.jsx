@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { PALLETS } from 'style/theme';
-import { forwardRef } from 'react';
+import styled from "styled-components";
+import { PALLETS } from "style/theme";
+import { forwardRef } from "react";
 
 export const Input = forwardRef(
-  ({ width, placeholder, type = 'text', desc, ...props }, ref) => {
+  ({ width, placeholder, type = "text", desc, ...props }, ref) => {
     return (
       <Container>
         <Inputspace
@@ -27,7 +27,7 @@ const Container = styled.div`
 `;
 
 const Inputspace = styled.input`
-  width: ${(props) => props.width || '100%'};
+  width: ${(props) => props.width || "100%"};
   border: 1px solid ${PALLETS.LIGHTGRAY};
   border-radius: 8px;
   padding: 0 15px;
@@ -39,6 +39,6 @@ const Inputspace = styled.input`
 `;
 
 const Desc = styled.span`
-  display: ${(props) => props.display || 'none'};
+  display: ${(props) => props.display || "none"};
   margin-left: 10px;
 `;

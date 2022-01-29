@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react';
-import styled from 'styled-components';
-import {PALLETS} from 'style/theme';
+import React, { useEffect, useRef, useState } from "react";
+import styled from "styled-components";
+import { PALLETS } from "style/theme";
 
-const InsertImagePreview = ( {width} ) => {
-  const [PreviewSrc, setPreviewSrc] = useState('');
+const InsertImagePreview = ({ width }) => {
+  const [PreviewSrc, setPreviewSrc] = useState("");
   const inputValue = useRef(null);
 
   const uploadPreview = (e) => {
@@ -19,30 +19,31 @@ const InsertImagePreview = ( {width} ) => {
   };
 
   const onClickRemove = () => {
-    inputValue.current.value = '';
-    setPreviewSrc('');
+    inputValue.current.value = "";
+    setPreviewSrc("");
   };
-  
+
   useEffect(() => {
     console.log(PreviewSrc);
   }, [PreviewSrc]);
 
   return (
     <InsertImagePreviewContainer width={width}>
-      <InsertImagePreviewBtn htmlFor="img"> + 이미지 첨부</InsertImagePreviewBtn>
-      <Input 
-        ref={inputValue} 
-        type="file" 
-        id="img" 
+      <InsertImagePreviewBtn htmlFor="img">
+        {" "}
+        + 이미지 첨부
+      </InsertImagePreviewBtn>
+      <Input
+        ref={inputValue}
+        type="file"
+        id="img"
         accept="image/*"
-        onChange={uploadPreview} 
+        onChange={uploadPreview}
       />
       {PreviewSrc && (
         <>
           <ImagePreview src={PreviewSrc} />
-          <RemovePreviewBtn onClick={onClickRemove}>
-            X
-          </RemovePreviewBtn>
+          <RemovePreviewBtn onClick={onClickRemove}>X</RemovePreviewBtn>
         </>
       )}
     </InsertImagePreviewContainer>
@@ -52,7 +53,8 @@ const InsertImagePreview = ( {width} ) => {
 export default InsertImagePreview;
 
 const InsertImagePreviewContainer = styled.div`
-  width: ${(props) => props.width || '100%'};
+  position: relative;
+  width: ${(props) => props.width || "100%"};
   height: 300px;
   display: flex;
   justify-content: center;
@@ -64,7 +66,7 @@ const InsertImagePreviewContainer = styled.div`
 const InsertImagePreviewBtn = styled.label`
   width: 180px;
   border-radius: 4px;
-  text-align: center;  
+  text-align: center;
   padding: 10px;
   background-color: ${PALLETS.LIGHTGRAY};
   border: 1.5px solid ${PALLETS.PURPLE};

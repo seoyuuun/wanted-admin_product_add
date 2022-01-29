@@ -1,18 +1,22 @@
 import styled from "styled-components";
+import ExpoSalesPeriodSet from "./ExpoSalesPeriodSet";
 import Addoption from "./addoption";
+import PagesInfoNotice from "./pagesInfoNotice";
+import Productorder from "./productorder";
+import ProductInfo from "./productInfo";
 import BuyerRecmmend from "./buyerRecmmend";
 import ProductInfoImg from "./productInfoImg";
-import Productorder from "./productorder";
-import SY from "./sy";
 
 const Admin = () => {
   return (
     <Wrap>
-      <Addoption></Addoption>
-      <SY />
+      <ExpoSalesPeriodSet />
+      <Addoption />
+      <ProductInfo />
       <Productorder />
       <ProductInfoImg />
       <BuyerRecmmend />
+      <PagesInfoNotice />
     </Wrap>
   );
 };
