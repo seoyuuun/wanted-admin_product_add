@@ -5,16 +5,17 @@ import Productorder from './productorder';
 import SY from './sy';
 import ProductInfo from './productInfo';
 import SubmitForm from 'hooks/SubmitForm';
-
 const Admin = () => {
   return (
+    
     <Wrap>
-      <Addoption></Addoption>
       <SY />
+      <ExpoSalesPeriodSet />
       <ProductInfo />
       <Productorder />
+      <Addoption />
       <PagesInfoNotice />
-      <SubmitForm></SubmitForm>
+      <SubmitForm />
     </Wrap>
   );
 };
