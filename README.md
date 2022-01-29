@@ -121,6 +121,14 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ☑️ Input : width, text, desc 등 인자를 받아 커스텀할 수 있는 Input 컴포넌트
 
+<br/>
+
+#### 양다혜
+
+☑️ InsertImage : 이미지 첨부 컴포넌트(isMultiple값의 true, false로 하나의 사진 또는 여러개의 사진을 구분, 이미지 선택 시 우측에 파일명 출력되고 배열에 저장, X버튼 클릭시 삭제)
+
+☑️ InsertImagePreview : 이미지 프리뷰 컴포넌트(이미지 선택시 미리보기로 이미지 출력, X버튼 클릭시 삭제, 파일명과 src값 저장)
+
 
 ## 기능별 영상
 
@@ -130,7 +138,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ### 2. 상품 등록 (양다혜)
 
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/58350897/151654105-50f25d74-c3dd-42fd-ae02-aa17e0414743.gif)
+- ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/58350897/151654105-50f25d74-c3dd-42fd-ae02-aa17e0414743.gif)
 
 ### 3. 상품 옵션 (박서영)
 
