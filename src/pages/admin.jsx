@@ -1,12 +1,14 @@
-import styled from 'styled-components';
-import Addoption from './addoption';
-import SY from './sy';
+import styled from "styled-components";
+import Addoption from "./addoption";
+import Productorder from "./productorder";
+import SY from "./sy";
 
 const Admin = () => {
   return (
     <Wrap>
       <Addoption></Addoption>
       <SY />
+      <Productorder />
     </Wrap>
   );
 };
