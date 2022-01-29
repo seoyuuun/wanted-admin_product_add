@@ -6,6 +6,12 @@ import Productorder from "./productorder";
 import ProductInfo from "./productInfo";
 import BuyerRecmmend from "./buyerRecmmend";
 import ProductInfoImg from "./productInfoImg";
+import styled from "styled-components";
+import ExpoSalesPeriodSet from "./ExpoSalesPeriodSet";
+import Addoption from "./addoption";
+import PagesInfoNotice from "./pagesInfoNotice";
+import Productorder from "./productorder";
+import ProductInfo from "./productInfo";
 
 const Admin = () => {
   return (

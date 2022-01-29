@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import { PALLETS } from "style/theme";
 
@@ -8,6 +8,8 @@ const InsertImagePreview = ({ width }) => {
 
   const uploadPreview = (e) => {
     const file = e.target.files[0];
+    const fileName = e.target.files[0].name;
+    console.log(fileName);
     const reader = new FileReader();
     reader.readAsDataURL(file);
     return new Promise((resolve) => {
@@ -22,10 +24,6 @@ const InsertImagePreview = ({ width }) => {
     inputValue.current.value = "";
     setPreviewSrc("");
   };
-
-  useEffect(() => {
-    console.log(PreviewSrc);
-  }, [PreviewSrc]);
 
   return (
     <InsertImagePreviewContainer width={width}>
