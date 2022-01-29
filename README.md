@@ -41,8 +41,8 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ## 기능별 영상
 
-### 1 노출 및 판매 기간 설정 (박서윤)
-
+### 1 노출 및 판매 기간 설정 (박서윤)<br/>
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/84560867/151652562-43658a25-5ff8-40a4-bf59-bcde24ab04c2.gif)
 
 ### 2. 상품 등록 (양다혜)
 
