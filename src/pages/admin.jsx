@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import Addoption from "./addoption";
-import PagesInfoNotice from "./pagesInfoNotice";
-import Productorder from "./productorder";
-import SY from "./sy";
-import ProductInfo  from "./productInfo";
+import styled from 'styled-components';
+import ExpoSalesPeriodSet from './ExpoSalesPeriodSet';
+import Addoption from './addoption';
+import PagesInfoNotice from './pagesInfoNotice';
+import Productorder from './productorder';
+import ProductInfo from './productInfo';
 
 const Admin = () => {
   return (
     <Wrap>
-      <Addoption></Addoption>
-      <SY />
-      <ProductInfo/>
+      <ExpoSalesPeriodSet />
+      <Addoption />
+      <ProductInfo />
       <Productorder />
       <PagesInfoNotice />
     </Wrap>
