@@ -18,7 +18,7 @@ const InfoNotice = () => {
     setForm((prev) => prev.slice(0, prev.length - 1));
   };
 
-  console.log(JSON.stringify(form));
+  console.log("InfoNotice Data Result", JSON.stringify(form));
   return (
     <InfoContainer>
       {form.map((notice) => (
