@@ -89,6 +89,16 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 <br/>
 
+#### 박서영
+
+☑️ Contentwrap : 기능별 섹션 레이아웃
+
+☑️ Button : font-color, background, border, text 등 인자를 받아 커스텀할 수 있는 버튼 컴포넌트
+
+☑️ Input : width, text, desc 등 인자를 받아 커스텀할 수 있는 Input 컴포넌트
+
+<br/>
+
 ## 기능별 영상
 
 ### 1 노출 및 판매 기간 설정 (박서윤)<br/>
@@ -107,7 +117,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
   ![옵션세트내옵션추가](https://user-images.githubusercontent.com/93420227/151652835-69846b15-8f79-4461-a56c-4ffb39dcbc50.gif)
 - 추가 옵션 추가 <br/> <br/>
   ![추가옵션등록](https://user-images.githubusercontent.com/93420227/151652854-8cda92c2-0287-4e81-bf09-795a90e400d9.gif)
-- 이미지 프리뷰 첨부 <br/> <br/>
+- 이미지 프리뷰 첨부(양다혜) <br/> <br/>
   ![이미지첨부](https://user-images.githubusercontent.com/93420227/151652847-52a1969d-4eae-48d3-9679-2fbc334518a8.gif)
 
 ### 4. 상품 정보 고시 (민지연)
@@ -122,6 +132,8 @@ https://brave-visvesvaraya-053de0.netlify.app/
 ### 🙋‍♀️ 양다혜
 
 ### 🙋‍♀️ 박서영
+
+테스크 분석 및 분리, 공용 컴포넌트 제작, 깃헙 이슈를 통한 프로젝트 관리, 데이터 명세 등 사전에 충분한 협의를 통해 체계적으로 계획을 세웠던 프로젝트였다. 불필요하게 낭비되는 코드를 줄이고 건설적으로 코드를 설계할 수 있어서 공부가 많이 되었다.
 
 ### 🙋‍♀️ 민지연
 
