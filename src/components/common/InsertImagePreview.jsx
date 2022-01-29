@@ -52,6 +52,7 @@ const InsertImagePreview = ( {width} ) => {
 export default InsertImagePreview;
 
 const InsertImagePreviewContainer = styled.div`
+  position: relative;
   width: ${(props) => props.width || '100%'};
   height: 300px;
   display: flex;
