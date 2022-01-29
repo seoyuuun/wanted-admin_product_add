@@ -184,7 +184,7 @@ const Warp = styled.div`
   justify-content: space-between;
 `;
 
-const Form = styled.form`
+const Form = styled.div`
   padding: 50px;
   width: 100%;
   height: 100%;
