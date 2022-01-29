@@ -101,17 +101,17 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 #### 민지연
 
-☑️ Toggle : 사용하고자 하는 컴포넌트에 content, select, onChange를 받아 onChange로 event가 실행되면 select가 되도록 기능
+☑️ Radio
 
-☑️ Radio : boolean state 값을 받아 true, false로 state를 관리되도록 기능
+- 사용하고자 하는 컴포넌트에 content, select, onChange를 받아 onChange로 event가 실행되면 select가 되도록 기능 
 
-#### 양다혜
+- '제한 없음'을 default값으로 지정하여 자동으로 select 값 유지
 
-☑️ InsertImage : 이미지 첨부 컴포넌트(isMultiple값의 true, false로 하나의 사진 또는 여러개의 사진을 구분, 이미지 선택 시 우측에 파일명 출력되고 배열에 저장, X버튼 클릭시 삭제) 
+☑️ Toggle 
 
-☑️ InsertImagePreview : 이미지 프리뷰 컴포넌트(이미지 선택시 미리보기로 이미지 출력, X버튼 클릭시 삭제, 파일명과 src값 저장)
+- boolean state 값을 받아 true, false로 state를 관리되도록 기능
 
-<br/>
+<br/><br/>
 
 ## 기능별 영상
 
@@ -121,7 +121,6 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ### 2. 상품 등록 (양다혜)
 
-- 상품등록<br/><br/>
 ![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/58350897/151654105-50f25d74-c3dd-42fd-ae02-aa17e0414743.gif)
 
 ### 3. 상품 옵션 (박서영)
@@ -137,8 +136,12 @@ https://brave-visvesvaraya-053de0.netlify.app/
 
 ### 4. 상품 정보 고시 (민지연)
 
-- 상품 정보 고시(전체 form 추가/삭제, 옵션 사항 추가/삭제) <br/> <br/>
-  ![상품 정보 고시](https://user-images.githubusercontent.com/53133662/151653415-c2b1b20b-9f38-4302-a26c-baf2fd66fe6d.gif)
+- 상품 정보 고시 (전체 form 추가/삭제, 정보고시 생성 순서 숫자 표기)  <br/> <br/>
+ ![ezgif com-gif-maker (6)](https://user-images.githubusercontent.com/53133662/151654179-7e4c0d5b-0a90-4ea5-8bc9-cc590c8eb54b.gif)
+- 상품 정보 고시 (input 입력값 받기)  <br/> <br/>
+![ezgif com-gif-maker (8)](https://user-images.githubusercontent.com/53133662/151654174-ea538855-2522-46fc-af51-e1ce68782f4e.gif)
+- 상품 정보 고시 (항목 옵션 추가/삭제)  <br/> <br/>
+![ezgif com-gif-maker (7)](https://user-images.githubusercontent.com/53133662/151654177-19bfd785-c0f8-41a2-ae85-d5a7f01424c8.gif)
 - 상품옵션 toggle <br/> <br/>
   ![상품 옵션 toggle](https://user-images.githubusercontent.com/53133662/151653417-d94492b6-d325-4d99-9d84-0d93c8828a44.gif)
 - 상품소개이미지, 구매자추천이미지 <br/> <br/>
@@ -158,6 +161,7 @@ https://brave-visvesvaraya-053de0.netlify.app/
 ### 🙋‍♀️ 박서영
 
 ### 🙋‍♀️ 민지연
+
 
 ## 프로젝트 구조 설명
 
